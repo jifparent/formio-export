@@ -255,7 +255,6 @@ const FormioExportUtils = {
       }
     });
   },
-
   /**
    * Creates a DOM element with optional attributes and children elements.
    *

@@ -25,5 +25,17 @@ export default (element, component) => {
     }
     return componentElement;
   }
+  if (component && component.content) {
+    let componentElement = FormioExportUtils.createElement('div', {
+      class: `formio-component ${component.type}-component`,
+      id: Math.random().toString(36).substring(7)
+    });
+
+    componentElement.innerHTML = component.content;
+    if (_.isElement(element)) {
+      element.appendChild(componentElement);
+    }
+    return componentElement;
+  }
   return null;
 };

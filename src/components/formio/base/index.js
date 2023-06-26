@@ -16,6 +16,7 @@ class BaseComponent {
     this._dims = {};
     this._baseWidth = 1;
     this._baseHeight = 1;
+    this._component = component;
 
     if (_.isObject(component) && component.hasOwnProperty('type')) {
       let comp = _.cloneDeep(component);
