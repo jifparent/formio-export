@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import FormioExportUtils from '../../../utils';
-import FormioComponent from '../';
-import { toHtml, getDimensions } from './plugins';
+import FormioExportUtils from '../../../utils/index.js';
+import FormioComponent from '../index.js';
+import { toHtml, getDimensions } from './plugins/index.js';
 
 class BaseComponent {
 

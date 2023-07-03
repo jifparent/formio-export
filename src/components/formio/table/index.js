@@ -1,4 +1,4 @@
-import BaseComponent from '../base';
+import BaseComponent from '../base/index.js';
 
 class TableComponent extends BaseComponent {
   constructor (component, data, options) {

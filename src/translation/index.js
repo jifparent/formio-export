@@ -1,4 +1,4 @@
-import FormioExportUtils from './../utils';
+import FormioExportUtils from './../utils/index.js';
 
 export default class FormioExportTranslation {
   static translateComponent (components, options) {

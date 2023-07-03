@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import FormioExportUtils from '../../../utils';
-import BaseComponent from '../base';
-import { toHtml } from './plugins';
+import FormioExportUtils from '../../../utils/index.js';
+import BaseComponent from '../base/index.js';
+import { toHtml } from './plugins/index.js';
 
 class SelectComponent extends BaseComponent {
   constructor (component, data, options) {

@@ -1,4 +1,4 @@
-import FileComponent from '../file';
+import FileComponent from '../file/index.js';
 
 class SignatureComponent extends FileComponent {
   constructor (component, data, options) {

@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import FormioExportUtils from '../../../../utils';
+import FormioExportUtils from '../../../../utils/index.js';
 
 export default (element, component) => {
   if (component && component.columns) {

@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import BaseComponent from '../base';
-import { toHtml } from './plugins';
+import BaseComponent from '../base/index.js';
+import { toHtml } from './plugins/index.js';
 
 class SurveyComponent extends BaseComponent {
   constructor (component, data, options) {

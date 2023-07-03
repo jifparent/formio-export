@@ -1,4 +1,4 @@
-import NumberComponent from '../number';
+import NumberComponent from '../number/index.js';
 
 class CurrencyComponent extends NumberComponent {
   constructor (component, data) {

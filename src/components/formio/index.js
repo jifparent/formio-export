@@ -1,39 +1,39 @@
-import TextFieldComponent from './textfield';
-import TextAreaComponent from './textarea';
-import EmailComponent from './email';
-import PasswordComponent from './password';
-import PhoneNumberComponent from './phonenumber';
+import TextFieldComponent from './textfield/index.js';
+import TextAreaComponent from './textarea/index.js';
+import EmailComponent from './email/index.js';
+import PasswordComponent from './password/index.js';
+import PhoneNumberComponent from './phonenumber/index.js';
 
-import NumberComponent from './number';
-import CurrencyComponent from './currency';
+import NumberComponent from './number/index.js';
+import CurrencyComponent from './currency/index.js';
 
-import DateTimeComponent from './datetime';
-import DayComponent from './day';
-import TimeComponent from './time';
-import AddressComponent from './address';
+import DateTimeComponent from './datetime/index.js';
+import DayComponent from './day/index.js';
+import TimeComponent from './time/index.js';
+import AddressComponent from './address/index.js';
 
-import CheckBoxComponent from './checkbox';
-import RadioComponent from './radio';
-import SelectBoxesComponent from './selectboxes';
-import SelectComponent from './select';
-import ResourceComponent from './resource';
+import CheckBoxComponent from './checkbox/index.js';
+import RadioComponent from './radio/index.js';
+import SelectBoxesComponent from './selectboxes/index.js';
+import SelectComponent from './select/index.js';
+import ResourceComponent from './resource/index.js';
 
-import SurveyComponent from './survey';
-import FileComponent from './file';
-import SignatureComponent from './signature';
+import SurveyComponent from './survey/index.js';
+import FileComponent from './file/index.js';
+import SignatureComponent from './signature/index.js';
 
-import ContainerComponent from './container';
-import DataGridComponent from './datagrid';
-import EditGridComponent from './editgrid';
+import ContainerComponent from './container/index.js';
+import DataGridComponent from './datagrid/index.js';
+import EditGridComponent from './editgrid/index.js';
 
-import FormComponent from './form';
+import FormComponent from './form/index.js';
 
-import ColumnsComponent from './columns';
-import PanelComponent from './panel';
-import FieldSetComponent from './fieldset';
-import HtmlElementComponent from './htmlelement';
+import ColumnsComponent from './columns/index.js';
+import PanelComponent from './panel/index.js';
+import FieldSetComponent from './fieldset/index.js';
+import HtmlElementComponent from './htmlelement/index.js';
 
-import UnknownComponent from './unknown';
+import UnknownComponent from './unknown/index.js';
 
 const FormioComponent = {
   textfield: TextFieldComponent,

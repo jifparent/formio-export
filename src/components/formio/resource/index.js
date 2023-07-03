@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import FormioExportUtils from '../../../utils';
-import SelectComponent from '../select';
+import FormioExportUtils from '../../../utils/index.js';
+import SelectComponent from '../select/index.js';
 
 class ResourceComponent extends SelectComponent {
   constructor (component, data, options) {

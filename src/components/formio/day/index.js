@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import BaseComponent from '../base';
+import BaseComponent from '../base/index.js';
 
 class DayComponent extends BaseComponent {
   constructor (component, data, options) {

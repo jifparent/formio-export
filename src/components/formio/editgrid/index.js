@@ -1,4 +1,4 @@
-import BaseComponent from '../base';
+import BaseComponent from '../base/index.js';
 
 class EditGridComponent extends BaseComponent {
   constructor (component, data, options) {

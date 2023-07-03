@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield';
+import TextFieldComponent from '../textfield/index.js';
 
 class TimeComponent extends TextFieldComponent {
   constructor (component, data, options) {

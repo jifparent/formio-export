@@ -1,4 +1,4 @@
-import toHtml from './html';
+import toHtml from './html.js';
 
 export {
   toHtml

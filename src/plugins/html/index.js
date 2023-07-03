@@ -1,5 +1,5 @@
-import FormioExportUtils from '../../utils';
-import { style } from './style';
+import FormioExportUtils from '../../utils/index.js';
+import { style } from './style.js';
 
 export default (component) => {
   return new Promise((resolve, reject) => {
