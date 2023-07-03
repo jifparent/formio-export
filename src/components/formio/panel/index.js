@@ -1,4 +1,4 @@
-import ContainerComponent from '../container';
+import ContainerComponent from '../container/index.js';
 
 class PanelComponent extends ContainerComponent {
   constructor (component, data, options) {

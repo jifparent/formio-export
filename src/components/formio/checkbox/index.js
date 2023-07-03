@@ -1,6 +1,6 @@
-import BaseComponent from '../base';
-import FormioExportTranslation from '../../../translation';
-import { toHtml } from './plugins';
+import BaseComponent from '../base/index.js';
+import FormioExportTranslation from '../../../translation/index.js';
+import { toHtml } from './plugins/index.js';
 
 class CheckBoxComponent extends BaseComponent {
   constructor (component, data, options) {

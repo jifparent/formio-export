@@ -1,5 +1,5 @@
-import ContainerComponent from '../container';
-import { toHtml, getDimensions } from './plugins';
+import ContainerComponent from '../container/index.js';
+import { toHtml, getDimensions } from './plugins/index.js';
 
 class FormComponent extends ContainerComponent {
   constructor (component, data, options = {}) {

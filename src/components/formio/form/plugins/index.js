@@ -1,5 +1,5 @@
-import toHtml from './html';
-import getDimensions from './dims';
+import toHtml from './html.js';
+import getDimensions from './dims.js';
 
 export {
   toHtml,

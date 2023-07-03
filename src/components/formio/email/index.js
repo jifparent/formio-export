@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield';
+import TextFieldComponent from '../textfield/index.js';
 
 class EmailComponent extends TextFieldComponent {
   constructor (component, data, options) {

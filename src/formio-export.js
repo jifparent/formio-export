@@ -1,14 +1,14 @@
 import _ from 'lodash';
-import FormioExportUtils from './utils';
-import FormioComponent from './components/formio';
-import FormioExportTranslation from './translation';
+import FormioExportUtils from './utils/index.js';
+import FormioComponent from './components/formio/index.js';
+import FormioExportTranslation from './translation/index.js';
 
 // Import export plugins
 import {
   toHtml,
   toPdf,
   toXlsx
-} from './plugins';
+} from './plugins/index.js';
 
 /**
  * Class for exporting formio components into different formats

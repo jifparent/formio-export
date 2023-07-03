@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import BaseComponent from '../base';
-import { toHtml, getDimensions } from './plugins';
+import BaseComponent from '../base/index.js';
+import { toHtml, getDimensions } from './plugins/index.js';
 
 class DataGridComponent extends BaseComponent {
   constructor (component, data, options) {

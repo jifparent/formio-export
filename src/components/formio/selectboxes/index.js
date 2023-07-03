@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import BaseComponent from '../base';
+import BaseComponent from '../base/index.js';
 
-import { toHtml } from './plugins';
+import { toHtml } from './plugins/index.js';
 
 class SelectBoxesComponent extends BaseComponent {
   constructor (component, data, options) {

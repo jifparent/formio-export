@@ -1,4 +1,4 @@
-import PanelComponent from '../panel';
+import PanelComponent from '../panel/index.js';
 
 class FieldSetComponent extends PanelComponent {
   constructor (component, data, options) {

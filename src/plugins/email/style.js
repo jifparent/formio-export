@@ -1,4 +1,4 @@
-import FormioExportUtils from '../../utils';
+import FormioExportUtils from '../../utils/index.js';
 /* eslint max-len:off */
 export const style = FormioExportUtils.createElement('style', { type: 'text/css' }, `
 .card,
