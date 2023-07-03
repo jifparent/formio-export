@@ -1,49 +1,44 @@
 import FormioExportUtils from '../../utils';
 /* eslint max-len:off */
 export const style = FormioExportUtils.createElement('style', { type: 'text/css' }, `
-@page {
-	size: A4;
-}
-
-#formio__export .card,
-#formio__export .col {
+.card,
+.col {
 	position: relative
 }
 
-#formio__export .card,
-#formio__export {
+.card,
+body {
 	background-color: #fff
 }
 
-#formio__export {
+body {
 	margin: 0;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 	font-size: .9rem;
-	font-weight: 500;
-	line-height: 1.2;
+	font-weight: 400;
+	line-height: 1.3;
 	color: #212529;
 	text-align: left
 }
 
-#formio__export .card-header,
+.card-header,
 #formio__export .formio-component.grid-component>.component-value .grid-header,
-#formio__export .text-bold {
+.text-bold {
 	font-weight: 700
 }
 
-#formio__export .card-header,
-#formio__export .text-center {
+.card-header,
+.text-center {
 	text-align: center
 }
 
-
-#formio__export *,
+*,
 ::after,
 ::before {
 	box-sizing: border-box
 }
 
-#formio__export .row {
+.row {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-wrap: wrap;
@@ -52,7 +47,7 @@ export const style = FormioExportUtils.createElement('style', { type: 'text/css'
 	margin-left: -8px
 }
 
-#formio__export .col {
+.col {
 	-ms-flex-preferred-size: 0;
 	flex-basis: 0;
 	-ms-flex-positive: 1;
@@ -64,7 +59,7 @@ export const style = FormioExportUtils.createElement('style', { type: 'text/css'
 	padding-left: 15px
 }
 
-#formio__export .card {
+.card {
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-direction: column;
@@ -76,44 +71,38 @@ export const style = FormioExportUtils.createElement('style', { type: 'text/css'
 	border-radius: 0
 }
 
-#formio__export .card-header {
+.card-header {
 	padding: .75rem 1.25rem;
 	margin-bottom: 0;
 	background-color: rgba(0, 0, 0, .03);
 	border-bottom: 1px solid rgba(0, 0, 0, .125)
 }
 
-#formio__export .card-body {
+.card-body {
 	-ms-flex: 1 1 auto;
 	flex: 1 1 auto
 }
 
-#formio__export .col-sm-3 {
+.col-sm-3 {
 	-ms-flex: 0 0 25%;
 	flex: 0 0 25%;
 	max-width: 25%
 }
-#formio__export .col-sm-6 {
-	-ms-flex: 0 0 50%;
-	flex: 0 0 50%;
-	max-width: 50%
-}
-#formio__export .col-sm-9 {
+.col-sm-9 {
 	-ms-flex: 0 0 75%;
 	flex: 0 0 75%;
 	max-width: 75%
 }
 
-#formio__export .text-right {
+.text-right {
 	text-align: right
 }
 
-#formio__export .text-left {
+.text-left {
 	text-align: left
 }
 
-
-#formio__export .form-title,
+.form-title,
 #formio__export .formio-component.signature-component>.component-value {
 	text-align: center
 }
@@ -121,7 +110,7 @@ export const style = FormioExportUtils.createElement('style', { type: 'text/css'
 #formio__export {
 	border: 1px solid #ddd;
 	font-family: Lato;
-	max-width: 900px
+	max-width: 790px
 }
 
 #formio__export .formio-component:not(.no-layout) {
@@ -168,8 +157,8 @@ export const style = FormioExportUtils.createElement('style', { type: 'text/css'
 }
 
 #formio__export .formio-component>.component-value>img {
-	max-width: 250px
-	max-height: 100px
+	max-width: 250px;
+    max-height: 70px;
 }
 
 #formio__export .formio-component:not(.survey-component):not(.grid-component)>.component-value.card-body {

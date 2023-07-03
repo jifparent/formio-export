@@ -1,6 +1,7 @@
 import _ from 'lodash';
 import FormioExportUtils from './utils';
 import FormioComponent from './components/formio';
+import FormioExportTranslation from './translation';
 
 // Import export plugins
 import {
@@ -37,11 +38,22 @@ class FormioExport {
       this.options = _.cloneDeep(options.formio);
     }
 
+    if (options.hasOwnProperty('i18n')) {
+      this.options = Object.assign(this.options, _.cloneDeep(options.i18n));
+    }
+
+    if (options.hasOwnProperty('language')) {
+      this.options = Object.assign(this.options, _.cloneDeep(options.language));
+    }
+
     if (options.hasOwnProperty('component')) {
       this.component = options.component;
     } else if (component) {
       this.component = component;
     }
+
+    this.component.components = FormioExportTranslation.translateComponent(component.components, options);
+    this.component.title = FormioExportTranslation.translate(this.component.title, options);
 
     if (options.hasOwnProperty('data')) {
       this.data = options.data;
@@ -63,7 +75,7 @@ class FormioExport {
         this.component.type = 'form';
         this.component.display = 'form';
       }
-      this.component = FormioComponent.create(component || this.component, this.data, this.options);
+      this.component = FormioComponent.create(component || this.component, this.data, options);
     } else if (!this.component) {
       console.warn(this.constructor.name, 'no component defined');
     }

@@ -1,4 +1,4 @@
-import Html2Pdf from 'js-html2pdf';
+import Html2Pdf from 'html2pdf.js';
 import FormioExportUtils from '../../utils';
 
 export default (config = {}) => {
@@ -8,10 +8,6 @@ export default (config = {}) => {
         source: {
           type: Element,
           required: true
-        },
-        download: {
-          type: Boolean,
-          default: false
         }
       });
       Html2Pdf.getPdf(config).then((pdf) => resolve(pdf));

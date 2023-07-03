@@ -31,6 +31,7 @@ import FormComponent from './form';
 import ColumnsComponent from './columns';
 import PanelComponent from './panel';
 import FieldSetComponent from './fieldset';
+import HtmlElementComponent from './htmlelement';
 
 import UnknownComponent from './unknown';
 
@@ -60,6 +61,7 @@ const FormioComponent = {
   columns: ColumnsComponent,
   panel: PanelComponent,
   fieldset: FieldSetComponent,
+  htmlelement: HtmlElementComponent,
   unknown: UnknownComponent,
   form: FormComponent,
   create: (component, data, options) => {

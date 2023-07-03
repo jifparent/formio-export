@@ -1,7 +1,10 @@
+# This is a fork from Formio Exports
+You can find the original project at https://github.com/airarrazaval/formio-export/
+
 # Formio Export Tools
 
-![GitHub package version](https://img.shields.io/github/package-json/v/airarrazaval/formio-export.svg) 
-![npm (tag)](https://img.shields.io/npm/v/formio-export/latest.svg)
+![GitHub package version](https://img.shields.io/github/package-json/v/jifparent/formio-export.svg) 
+![npm (tag)](https://img.shields.io/npm/v/@jfparent/formio-export/latest.svg)
 
 
 This library is a plain JavaScript export tool for Form.io componets.  This allows to export any Form.io component (with or without submission data) to PDF (other formats comming soon).
@@ -18,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 To install this package into your project, you can use the following command within your terminal
 
 ```
-npm install --save formio-export
+npm install --save @jfparent/formio-export
 ```
 
 # Usage
@@ -26,7 +29,7 @@ npm install --save formio-export
 Creating a FormioExport instance
 
 ```javascript
-import FormioExport from 'formio-export';
+import FormioExport from '@jfparent/formio-export';
 
 let exporter = new FormioExport(component, data, options);
 ```
@@ -41,7 +44,18 @@ let options = {
   },
   config: {
     // pdf export configuration
-  }
+  }, 
+  i18n: {
+    en: {
+      "YES": "YES",
+      "NO": "NO"
+    },
+    fr: {
+      "YES": "OUI",
+      "NO": "NON"
+    }
+  },
+  language: "fr"
 };
 
 FormioExport.toPdf(options).then((pdf) => {
@@ -92,7 +106,7 @@ To get more information on PDF file configuration please read the following docu
 Using the FormioExport instance:
 
 ```javascript
-import FormioExport from 'formio-export';
+import FormioExport from '@jfparent/formio-export';
 
 let component = {
   type: 'form',
@@ -162,7 +176,7 @@ let config = {
 Clone git repository:
 
 ```
-git clone git@github.com:airarrazaval/formio-export.git
+git clone git@github.com:marcelcruz1/formio-export.git
 ```
 
 Install dependencies:
@@ -187,13 +201,7 @@ npm run test
 
 ## Built With
 
-* [js-html2pdf](https://github.com/airarrazaval/html2pdf) - Html to Pdf javascript library
-* [html2canvas](http://html2canvas.hertzen.com) - JavaScript html to canvas renderer library
-* [jsPDF](https://github.com/MrRio/jsPDF) - Client-sdie JavaScript PDF generator library
-
-## Authors
-
-* **Alfredo Irarrazaval** - *Initial work* - [airarrazaval](https://github.com/airarrazaval)
+* [html2pdf.js](https://github.com/eKoopmans/html2pdf.js) - html2pdf.js converts any webpage or element into a printable PDF entirely client-side using html2canvas and jsPDF
 
 ## License
 
