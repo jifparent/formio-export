@@ -1,4 +1,4 @@
-export default (config = {}) => {
+const xlsx = (config = {}) => {
   return new Promise((resolve, reject) => {
     try {
       throw new Error('[FormioExport] method not implemented');
@@ -7,4 +7,8 @@ export default (config = {}) => {
       reject(error);
     }
   });
+};
+
+module.exports = {
+  default: xlsx
 };

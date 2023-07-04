@@ -1,6 +1,6 @@
-import FormioExportUtils from './../utils/index.js';
+const FormioExportUtils = require('./../utils/index.js');
 
-export default class FormioExportTranslation {
+class FormioExportTranslation {
   static translateComponent (components, options) {
     if (!(options.hasOwnProperty('i18n') && !!options.i18n)) {
       return components;
@@ -51,4 +51,8 @@ export default class FormioExportTranslation {
     }
     return value;
   }
+};
+
+module.exports = {
+  default: FormioExportTranslation
 };

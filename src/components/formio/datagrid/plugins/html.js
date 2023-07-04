@@ -1,72 +1,74 @@
-import _ from 'lodash';
-import FormioExportUtils from '../../../../utils/index.js';
+const _ = require('lodash');
+const FormioExportUtils = require('../../../../utils/index.js');
 
-export default (element, component) => {
-  if (component && component.components) {
-    let componentElement = FormioExportUtils.createElement('div', {
-      class: `formio-component grid-component ${component.type}-component card`,
-      id: Math.random().toString(36).substring(7)
-    });
-    let labelElement = FormioExportUtils.createElement('div', {
-      class: 'component-label card-header'
-    }, component.getLabel());
-    let valueElement = FormioExportUtils.createElement('div', {
-      class: 'component-value card-body'
-    });
-
-    let transpose = component.numRows < component.numCols;
-
-    if (!transpose) {
-      let headerElement = FormioExportUtils.createElement('div', { class: 'row grid-row grid-header' });
-
-      _.forEach(component.rows[0], (c) => {
-        if (c) {
-          headerElement.appendChild(FormioExportUtils.createElement('div', { class: 'col grid-cell' }, c.getLabel()));
-        }
+module.exports = {
+  default: (element, component) => {
+    if (component && component.components) {
+      let componentElement = FormioExportUtils.createElement('div', {
+        class: `formio-component grid-component ${component.type}-component card`,
+        id: Math.random().toString(36).substring(7)
       });
-      valueElement.appendChild(headerElement);
+      let labelElement = FormioExportUtils.createElement('div', {
+        class: 'component-label card-header'
+      }, component.getLabel());
+      let valueElement = FormioExportUtils.createElement('div', {
+        class: 'component-value card-body'
+      });
 
-      _.forEach(component.rows, (row) => {
-        let rowElement = FormioExportUtils.createElement('div', { class: 'row grid-row' });
+      let transpose = component.numRows < component.numCols;
 
-        _.forEach(row, (col) => {
-          if (col) {
-            let colElement = FormioExportUtils.createElement('div', { class: 'col grid-cell' });
+      if (!transpose) {
+        let headerElement = FormioExportUtils.createElement('div', { class: 'row grid-row grid-header' });
 
-            col.toHtml(colElement);
-            rowElement.appendChild(colElement);
+        _.forEach(component.rows[0], (c) => {
+          if (c) {
+            headerElement.appendChild(FormioExportUtils.createElement('div', { class: 'col grid-cell' }, c.getLabel()));
           }
         });
-        valueElement.appendChild(rowElement);
-      });
-    } else {
-      valueElement.className += ' grid-transpose';
-      _.forEach(component.components, (row, i) => {
-        let rowElement = FormioExportUtils.createElement('div', {
-          class: 'row grid-row'
-        }, FormioExportUtils.createElement('div', {
-          class: 'col col-sm-3 grid-cell text-bold'
-        }, row.legend || row.title || row.label));
+        valueElement.appendChild(headerElement);
 
-        _.forEach(component.rows, (col) => {
-          let colElement = FormioExportUtils.createElement('div', { class: 'col grid-cell' });
+        _.forEach(component.rows, (row) => {
+          let rowElement = FormioExportUtils.createElement('div', { class: 'row grid-row' });
 
-          col[i].toHtml(colElement);
-          rowElement.appendChild(colElement);
+          _.forEach(row, (col) => {
+            if (col) {
+              let colElement = FormioExportUtils.createElement('div', { class: 'col grid-cell' });
+
+              col.toHtml(colElement);
+              rowElement.appendChild(colElement);
+            }
+          });
+          valueElement.appendChild(rowElement);
         });
-        valueElement.appendChild(rowElement);
-      });
-    }
+      } else {
+        valueElement.className += ' grid-transpose';
+        _.forEach(component.components, (row, i) => {
+          let rowElement = FormioExportUtils.createElement('div', {
+            class: 'row grid-row'
+          }, FormioExportUtils.createElement('div', {
+            class: 'col col-sm-3 grid-cell text-bold'
+          }, row.legend || row.title || row.label));
 
-    if (!component.hideLabel && (!component.inDataGrid || component.dataGridLabel)) {
-      componentElement.appendChild(labelElement);
-    }
-    componentElement.appendChild(valueElement);
+          _.forEach(component.rows, (col) => {
+            let colElement = FormioExportUtils.createElement('div', { class: 'col grid-cell' });
 
-    if (_.isElement(element)) {
-      element.appendChild(componentElement);
+            col[i].toHtml(colElement);
+            rowElement.appendChild(colElement);
+          });
+          valueElement.appendChild(rowElement);
+        });
+      }
+
+      if (!component.hideLabel && (!component.inDataGrid || component.dataGridLabel)) {
+        componentElement.appendChild(labelElement);
+      }
+      componentElement.appendChild(valueElement);
+
+      if (_.isElement(element)) {
+        element.appendChild(componentElement);
+      }
+      return componentElement;
     }
-    return componentElement;
+    return null;
   }
-  return null;
 };

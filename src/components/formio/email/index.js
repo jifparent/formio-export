@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield/index.js';
+const TextFieldComponent = require('../textfield/index.js');
 
 class EmailComponent extends TextFieldComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class EmailComponent extends TextFieldComponent {
   }
 }
 
-export default EmailComponent;
+module.exports = {
+  default: EmailComponent
+};

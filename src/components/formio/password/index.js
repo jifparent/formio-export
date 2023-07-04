@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield/index.js';
+const TextFieldComponent = require('../textfield/index.js');
 
 class PasswordComponent extends TextFieldComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class PasswordComponent extends TextFieldComponent {
   }
 }
 
-export default PasswordComponent;
+module.exports = {
+  default: PasswordComponent
+};

@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
 
 class HtmlElementComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -14,4 +14,6 @@ class HtmlElementComponent extends BaseComponent {
   }
 }
 
-export default HtmlElementComponent;
+module.exports = {
+  default: HtmlElementComponent
+};

@@ -1,4 +1,4 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
 const FormioExportUtils = {
 
@@ -306,4 +306,6 @@ const FormioExportUtils = {
   }
 };
 
-export default FormioExportUtils;
+module.exports = {
+  default: FormioExportUtils
+};

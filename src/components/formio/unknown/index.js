@@ -1,11 +1,13 @@
-import BaseComponent from '../base/index.js';
+const BaseComponent = require('../base/index.js');
 
-export default class UnknownComponent extends BaseComponent {
-  constructor (component, data, options) {
-    super(component, data, options);
-  }
+module.exports = {
+  default: class UnknownComponent extends BaseComponent {
+    constructor (component, data, options) {
+      super(component, data, options);
+    }
 
-  toHtml (element) {
-    return null;
+    toHtml (element) {
+      return null;
+    }
   }
-}
+};

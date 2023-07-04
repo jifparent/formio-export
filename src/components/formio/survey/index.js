@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
-import { toHtml } from './plugins/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
+const { toHtml } = require('./plugins/index.js');
 
 class SurveyComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -43,4 +43,6 @@ class SurveyComponent extends BaseComponent {
   }
 }
 
-export default SurveyComponent;
+module.exports = {
+  default: SurveyComponent
+};

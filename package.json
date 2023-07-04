@@ -1,7 +1,7 @@
 {
   "name": "@jfparent/formio-export",
-  "version": "0.4.7",
-  "type": "module",
+  "version": "0.4.8",
+  "type": "commonjs",
   "description": "Formio Export Tools",
   "main": "lib/formio-export.js",
   "directories": {

@@ -1,5 +1,5 @@
-import toHtml from './html.js';
+const toHtml = require('./html.js');
 
-export {
+module.exports = {
   toHtml
 };

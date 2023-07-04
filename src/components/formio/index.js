@@ -1,39 +1,39 @@
-import TextFieldComponent from './textfield/index.js';
-import TextAreaComponent from './textarea/index.js';
-import EmailComponent from './email/index.js';
-import PasswordComponent from './password/index.js';
-import PhoneNumberComponent from './phonenumber/index.js';
+const TextFieldComponent = require('./textfield/index.js');
+const TextAreaComponent = require('./textarea/index.js');
+const EmailComponent = require('./email/index.js');
+const PasswordComponent = require('./password/index.js');
+const PhoneNumberComponent = require('./phonenumber/index.js');
 
-import NumberComponent from './number/index.js';
-import CurrencyComponent from './currency/index.js';
+const NumberComponent = require('./number/index.js');
+const CurrencyComponent = require('./currency/index.js');
 
-import DateTimeComponent from './datetime/index.js';
-import DayComponent from './day/index.js';
-import TimeComponent from './time/index.js';
-import AddressComponent from './address/index.js';
+const DateTimeComponent = require('./datetime/index.js');
+const DayComponent = require('./day/index.js');
+const TimeComponent = require('./time/index.js');
+const AddressComponent = require('./address/index.js');
 
-import CheckBoxComponent from './checkbox/index.js';
-import RadioComponent from './radio/index.js';
-import SelectBoxesComponent from './selectboxes/index.js';
-import SelectComponent from './select/index.js';
-import ResourceComponent from './resource/index.js';
+const CheckBoxComponent = require('./checkbox/index.js');
+const RadioComponent = require('./radio/index.js');
+const SelectBoxesComponent = require('./selectboxes/index.js');
+const SelectComponent = require('./select/index.js');
+const ResourceComponent = require('./resource/index.js');
 
-import SurveyComponent from './survey/index.js';
-import FileComponent from './file/index.js';
-import SignatureComponent from './signature/index.js';
+const SurveyComponent = require('./survey/index.js');
+const FileComponent = require('./file/index.js');
+const SignatureComponent = require('./signature/index.js');
 
-import ContainerComponent from './container/index.js';
-import DataGridComponent from './datagrid/index.js';
-import EditGridComponent from './editgrid/index.js';
+const ContainerComponent = require('./container/index.js');
+const DataGridComponent = require('./datagrid/index.js');
+const EditGridComponent = require('./editgrid/index.js');
 
-import FormComponent from './form/index.js';
+const FormComponent = require('./form/index.js');
 
-import ColumnsComponent from './columns/index.js';
-import PanelComponent from './panel/index.js';
-import FieldSetComponent from './fieldset/index.js';
-import HtmlElementComponent from './htmlelement/index.js';
+const ColumnsComponent = require('./columns/index.js');
+const PanelComponent = require('./panel/index.js');
+const FieldSetComponent = require('./fieldset/index.js');
+const HtmlElementComponent = require('./htmlelement/index.js');
 
-import UnknownComponent from './unknown/index.js';
+const UnknownComponent = require('./unknown/index.js');
 
 const FormioComponent = {
   textfield: TextFieldComponent,
@@ -78,4 +78,6 @@ const FormioComponent = {
   }
 };
 
-export default FormioComponent;
+module.exports = {
+  default: FormioComponent
+};

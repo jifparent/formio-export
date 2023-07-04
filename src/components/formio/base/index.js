@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import FormioExportUtils from '../../../utils/index.js';
-import FormioComponent from '../index.js';
-import { toHtml, getDimensions } from './plugins/index.js';
+const _ = require('lodash');
+const FormioExportUtils = require('../../../utils/index.js');
+const FormioComponent = require('../index.js');
+const { toHtml, getDimensions } = require('./plugins/index.js');
 
 class BaseComponent {
 
@@ -86,4 +86,6 @@ class BaseComponent {
   }
 }
 
-export default BaseComponent;
+module.exports = {
+  default: BaseComponent
+};

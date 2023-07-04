@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
-import { toHtml } from './plugins/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
+const { toHtml } = require('./plugins/index.js');
 
 class ContainerComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -20,4 +20,6 @@ class ContainerComponent extends BaseComponent {
   }
 }
 
-export default ContainerComponent;
+module.exports = {
+  default: ContainerComponent
+};

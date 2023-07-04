@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
-import { toHtml, getDimensions } from './plugins/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
+const { toHtml, getDimensions } = require('./plugins/index.js');
 
 class DataGridComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -31,4 +31,6 @@ class DataGridComponent extends BaseComponent {
   }
 }
 
-export default DataGridComponent;
+module.exports = {
+  default: DataGridComponent
+};

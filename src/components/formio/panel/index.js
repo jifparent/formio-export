@@ -1,4 +1,4 @@
-import ContainerComponent from '../container/index.js';
+const ContainerComponent = require('../container/index.js');
 
 class PanelComponent extends ContainerComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class PanelComponent extends ContainerComponent {
   }
 }
 
-export default PanelComponent;
+module.exports = {
+  default: PanelComponent
+};

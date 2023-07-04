@@ -1,6 +1,6 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
-import { toHtml, getDimensions } from './plugins/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
+const { toHtml, getDimensions } = require('./plugins/index.js');
 
 class ColumnsComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -28,4 +28,6 @@ class ColumnsComponent extends BaseComponent {
   }
 }
 
-export default ColumnsComponent;
+module.exports = {
+  default: ColumnsComponent
+};

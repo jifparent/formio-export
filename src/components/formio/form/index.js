@@ -1,5 +1,5 @@
-import ContainerComponent from '../container/index.js';
-import { toHtml, getDimensions } from './plugins/index.js';
+const ContainerComponent = require('../container/index.js');
+const { toHtml, getDimensions } = require('./plugins/index.js');
 
 class FormComponent extends ContainerComponent {
   constructor (component, data, options = {}) {
@@ -15,4 +15,6 @@ class FormComponent extends ContainerComponent {
   }
 }
 
-export default FormComponent;
+module.exports = {
+  default: FormComponent
+};
