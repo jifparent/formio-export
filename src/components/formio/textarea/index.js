@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield/index.js';
+const TextFieldComponent = require('../textfield/index.js');
 
 class TextAreaComponent extends TextFieldComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class TextAreaComponent extends TextFieldComponent {
   }
 }
 
-export default TextAreaComponent;
+module.exports = {
+  default: TextAreaComponent
+};

@@ -1,4 +1,4 @@
-import BaseComponent from '../base/index.js';
+const BaseComponent = require('../base/index.js');
 
 class TableComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class TableComponent extends BaseComponent {
   }
 }
 
-export default TableComponent;
+module.exports = {
+  default: TableComponent
+};

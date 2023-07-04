@@ -1,4 +1,4 @@
-import FileComponent from '../file/index.js';
+const FileComponent = require('../file/index.js');
 
 class SignatureComponent extends FileComponent {
   constructor (component, data, options) {
@@ -14,4 +14,6 @@ class SignatureComponent extends FileComponent {
   }
 }
 
-export default SignatureComponent;
+module.exports = {
+  default: SignatureComponent
+};

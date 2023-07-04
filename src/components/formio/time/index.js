@@ -1,4 +1,4 @@
-import TextFieldComponent from '../textfield/index.js';
+const TextFieldComponent = require('../textfield/index.js');
 
 class TimeComponent extends TextFieldComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class TimeComponent extends TextFieldComponent {
   }
 }
 
-export default TimeComponent;
+module.exports = {
+  default: TimeComponent
+};

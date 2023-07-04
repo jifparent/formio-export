@@ -1,6 +1,6 @@
-import BaseComponent from '../base/index.js';
-import FormioExportTranslation from '../../../translation/index.js';
-import { toHtml } from './plugins/index.js';
+const BaseComponent = require('../base/index.js');
+const FormioExportTranslation = require('../../../translation/index.js');
+const { toHtml } = require('./plugins/index.js');
 
 class CheckBoxComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -18,4 +18,6 @@ class CheckBoxComponent extends BaseComponent {
   }
 }
 
-export default CheckBoxComponent;
+module.exports = {
+  default: CheckBoxComponent
+};

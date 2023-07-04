@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
 
-import { toHtml } from './plugins/index.js';
+const { toHtml } = require('./plugins/index.js');
 
 class SelectBoxesComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -38,4 +38,6 @@ class SelectBoxesComponent extends BaseComponent {
   }
 }
 
-export default SelectBoxesComponent;
+module.exports = {
+  default: SelectBoxesComponent
+};

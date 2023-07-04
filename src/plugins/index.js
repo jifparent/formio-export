@@ -1,9 +1,9 @@
-import toHtml from './html/index.js';
-import toPdf from './pdf/index.js';
-import toXlsx from './xlsx/index.js';
-import toEmail from './email/index.js';
+const toHtml = require('./html/index.js');
+const toPdf = require('./pdf/index.js');
+const toXlsx = require('./xlsx/index.js');
+const toEmail = require('./email/index.js');
 
-export {
+module.exports = {
   toHtml,
   toPdf,
   toXlsx,

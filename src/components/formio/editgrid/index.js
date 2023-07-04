@@ -1,4 +1,4 @@
-import BaseComponent from '../base/index.js';
+const BaseComponent = require('../base/index.js');
 
 class EditGridComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -7,4 +7,6 @@ class EditGridComponent extends BaseComponent {
   }
 }
 
-export default EditGridComponent;
+module.exports = {
+  default: EditGridComponent
+};

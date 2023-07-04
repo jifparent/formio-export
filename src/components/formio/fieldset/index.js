@@ -1,4 +1,4 @@
-import PanelComponent from '../panel/index.js';
+const PanelComponent = require('../panel/index.js');
 
 class FieldSetComponent extends PanelComponent {
   constructor (component, data, options) {
@@ -6,4 +6,6 @@ class FieldSetComponent extends PanelComponent {
   }
 }
 
-export default FieldSetComponent;
+module.exports = {
+  default: FieldSetComponent
+};

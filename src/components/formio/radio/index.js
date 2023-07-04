@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
 
 class RadioComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -18,4 +18,6 @@ class RadioComponent extends BaseComponent {
   }
 }
 
-export default RadioComponent;
+module.exports = {
+  default: RadioComponent
+};

@@ -1,7 +1,7 @@
-import toHtml from './html.js';
-import getDimensions from './dims.js';
+const toHtml = require('./html.js');
+const getDimensions = require('./dims.js');
 
-export {
+module.exports = {
   toHtml,
   getDimensions
 };

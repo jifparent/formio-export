@@ -1,4 +1,4 @@
-import NumberComponent from '../number/index.js';
+const NumberComponent = require('../number/index.js');
 
 class CurrencyComponent extends NumberComponent {
   constructor (component, data) {
@@ -6,4 +6,6 @@ class CurrencyComponent extends NumberComponent {
   }
 }
 
-export default CurrencyComponent;
+module.exports = {
+  default: CurrencyComponent
+};

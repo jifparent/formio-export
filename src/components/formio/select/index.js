@@ -1,7 +1,7 @@
-import _ from 'lodash';
-import FormioExportUtils from '../../../utils/index.js';
-import BaseComponent from '../base/index.js';
-import { toHtml } from './plugins/index.js';
+const _ = require('lodash');
+const FormioExportUtils = require('../../../utils/index.js');
+const BaseComponent = require('../base/index.js');
+const { toHtml } = require('./plugins/index.js');
 
 class SelectComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -52,4 +52,6 @@ class SelectComponent extends BaseComponent {
   }
 }
 
-export default SelectComponent;
+module.exports = {
+  default: SelectComponent
+};

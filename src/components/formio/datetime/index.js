@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import BaseComponent from '../base/index.js';
+const _ = require('lodash');
+const BaseComponent = require('../base/index.js');
 
 class DateTimeComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -14,4 +14,6 @@ class DateTimeComponent extends BaseComponent {
   }
 }
 
-export default DateTimeComponent;
+module.exports = {
+  default: DateTimeComponent
+};

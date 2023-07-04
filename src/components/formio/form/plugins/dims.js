@@ -1,24 +1,26 @@
-import _ from 'lodash';
+const _ = require('lodash');
 
-export default (component) => {
-  let dims = {
-    width: component._baseWidth,
-    height: component._baseHeight
-  };
+module.exports = {
+  default: (component) => {
+    let dims = {
+      width: component._baseWidth,
+      height: component._baseHeight
+    };
 
-  let maxWidth = 0;
+    let maxWidth = 0;
 
-  _.forEach(component.components, (c) => {
-    if (c) {
-      let d = c.getDimensions();
+    _.forEach(component.components, (c) => {
+      if (c) {
+        let d = c.getDimensions();
 
-      if (maxWidth < d.width) {
-        maxWidth = d.width;
+        if (maxWidth < d.width) {
+          maxWidth = d.width;
+        }
+        dims.height += d.height;
       }
-      dims.height += d.height;
-    }
-  });
+    });
 
-  dims.width += maxWidth;
-  return dims;
+    dims.width += maxWidth;
+    return dims;
+  }
 };

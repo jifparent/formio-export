@@ -1,5 +1,5 @@
-import BaseComponent from '../base/index.js';
-import { toHtml } from './plugins/index.js';
+const BaseComponent = require('../base/index.js');
+const { toHtml } = require('./plugins/index.js');
 
 class FileComponent extends BaseComponent {
   constructor (component, data, options) {
@@ -11,4 +11,6 @@ class FileComponent extends BaseComponent {
   }
 }
 
-export default FileComponent;
+module.exports = {
+  default: FileComponent
+};
