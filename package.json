@@ -1,6 +1,6 @@
 {
   "name": "@jfparent/formio-export",
-  "version": "0.4.8",
+  "version": "0.4.9",
   "type": "commonjs",
   "description": "Formio Export Tools",
   "main": "lib/formio-export.js",
