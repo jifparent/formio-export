@@ -10,6 +10,8 @@ const config = {
     output: {
         filename: 'formio-export.js',
         path: path.resolve(__dirname, 'lib'),
+        publicPath: '',
+        globalObject: 'this',
     },
     optimization: {
       minimize: true
